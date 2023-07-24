@@ -1,0 +1,38 @@
+:root {
+	--bg-color-1: hsla(0deg 0% 100% / 10%);
+	--bg-color-1-5: hsla(0deg 0% 100% / 5%);
+	--bg-color-2: hsla(0deg 0% 100% / 20%);
+	--bg-color-2-5: hsla(0deg 0% 100% / 25%);
+	--bg-color-3: hsla(0deg 0% 100% / 30%);
+	--bg-color-3-5: hsla(0deg 0% 100% / 30%);
+	--font-color-3: hsla(0deg 0% 100% / 50%);
+	--font-color-2: hsla(0deg 0% 100% / 70%);
+	--font-color: hsl(0, 0%, 95%);
+	--accent-color: hsl(0, 0%, 90%);
+	--border: 1px solid hsla(0deg 0% 100% / 10%);
+	--filter: blur(20px);
+}
+
+body {
+	background-image: url(../img/backdrop.jpg) !important;
+	background-size: cover !important;
+}
+
+.loading-container {
+	background-image: url(../img/backdrop.jpg) !important;
+	background-size: cover !important;
+}
+
+option {
+	color: black !important;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--bg-color-1-5);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--bg-color-1);
+}
+::-webkit-scrollbar-thumb:active {
+	background: var(--bg-color-2);
+}

@@ -1,0 +1,20 @@
+/* Variables and mixins declared here will be available in all other SCSS files */
+$spacing: 20px;
+$spacing-small: 10px;
+$roundness: 20px;
+$roundness-small: 12px;
+$breakpoint-phone: 480px;
+
+@mixin box {
+	background: var(--bg-color-2);
+	border: var(--border);
+	backdrop-filter: var(--filter);
+	border-radius: $roundness;
+	padding: $spacing;
+}
+
+@mixin nowrap {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
