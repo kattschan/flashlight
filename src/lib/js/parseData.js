@@ -177,14 +177,13 @@ export function parseData(session, oldAssignments) {
 		// period.gpa(average all classes, 90 is 4 points, 80 is 3 points, 70 is 2 points anything else is no points)
 		period.gpa = 0
 		for (let grade of grades) {
-			// only for the purposes of this loop, if the class name starts with AP, add 10 points
-			const tempGrade = period.Courses.Course[grade.index].Title.startsWith('AP ')
-				? grade + 10
-				: grade
-			
-			if (tempGrade >= 100) period.gpa += 5
-			else if (tempGrade >= 90) period.gpa += 4
-			else if (tempGrade >= 80) period.gpa += 3
+			if (grade >= 90) period.gpa += 4
+			else if (grade >= 80) period.gpa += 3
+			else if (grade >= 70) period.gpa += 2
+		}
+		// If the class name starts with "AP " then add 1 point to the GPA
+		for (let course of period.Courses.Course) {
+			if (course.Title.startsWith('AP ')) period.gpa++
 		}
 		period.gpa /= grades.length
 		period.gpa = period.gpa.toFixed(2)
