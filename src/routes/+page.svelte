@@ -21,7 +21,7 @@
 		<div class="value-label">Average grade<br />&nbsp;</div>
 	</div>
 	<div class="gpa value">
-		<h1 style={$session.gradebook.gpa.style}>
+		<h1 style={$session.gradebook.gpa}>
 			{$session.gradebook.gpa}
 		</h1>
 		<div class="value-label">GPA</div>
