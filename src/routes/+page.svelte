@@ -20,11 +20,11 @@
 		</h1>
 		<div class="value-label">Average grade<br />&nbsp;</div>
 	</div>
-	<div class="improvement value">
-		<h1 style={$session.gradebook.week.averageStyle}>
-			{$session.gradebook.week.average}
+	<div class="gpa value">
+		<h1 style={$session.gradebook.gpa}>
+			{$session.gradebook.gpa}
 		</h1>
-		<div class="value-label">Average grade<br />this week</div>
+		<div class="value-label">GPA</div>
 	</div>
 	<div class="week-assignments value">
 		<h1>{$session.gradebook.week.length}</h1>

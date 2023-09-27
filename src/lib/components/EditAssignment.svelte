@@ -110,7 +110,8 @@
 						class="total"
 						type="number"
 						step="any"
-						min="0"
+						min="1"
+						max="1"
 						placeholder="Total"
 						bind:value={total}
 					/>
@@ -119,7 +120,7 @@
 					<div class="error">{error}</div>
 				{/if}
 				<div class="row">
-					<input type="range" min="0" max={total} bind:value={points} class="slider" />
+					<input type="range" min="0" max=1 bind:value={points} class="slider" />
 				</div>
 				<div class="row">
 					{#if assignment.fake}

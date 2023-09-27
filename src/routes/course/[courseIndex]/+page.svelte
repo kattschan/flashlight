@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte'
 	import { session } from '$lib/stores/session.js'
 	import Chart from 'chart.js/auto/auto'
-	import PeriodSelect from '$lib/components/PeriodSelect.svelte'
 	import FakeAssignment from '$lib/components/FakeAssignment.svelte'
 	import EditAssignment from '$lib/components/EditAssignment.svelte'
 
@@ -135,7 +134,6 @@
 <div class="layout">
 	<div class="grid-heading-container">
 		<h1 class="title">{course.Title}</h1>
-		<PeriodSelect bind:period={$session.selectedPeriod} />
 	</div>
 	<div class="grade">
 		<h1 class="grade-letter" style={course.style}>

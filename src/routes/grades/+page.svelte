@@ -1,6 +1,5 @@
 <script>
 	import { session } from '$lib/stores/session.js'
-	import PeriodSelect from '$lib/components/PeriodSelect.svelte'
 </script>
 
 <svelte:head>
@@ -10,7 +9,6 @@
 <div class="layout" data-sveltekit-prefetch>
 	<div class="grid-heading-container">
 		<h1>Grades</h1>
-		<PeriodSelect bind:period={$session.selectedPeriod} />
 	</div>
 	<div class="content">
 		<table>

@@ -11,8 +11,7 @@ export async function POST({ request }) {
 		let client = await login(body.districtUrl, body.username, body.password)
 		result = await Promise.all([
 			client.getStudentInfo().then((value) => JSON.parse(value).StudentInfo),
-			client.getGradebook(0).then((value) => JSON.parse(value).Gradebook),
-			client.getGradebook(1).then((value) => JSON.parse(value).Gradebook),
+			client.getGradebook().then((value) => JSON.parse(value).Gradebook),
 		])
 
 		if (!result[0]) {
@@ -25,14 +24,7 @@ export async function POST({ request }) {
 		})
 	}
 
-	const currentPeriod =
-		result[1].ReportingPeriods.ReportPeriod.length -
-		1 -
-		result[1].ReportingPeriods.ReportPeriod.slice()
-			.reverse()
-			.findIndex((period) => {
-				return new Date() > new Date(period.StartDate)
-			})
+		const currentPeriod = 0;
 
 	return new Response(
 		JSON.stringify({

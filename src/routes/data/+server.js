@@ -40,14 +40,7 @@ export async function GET({ locals }) {
 
 	console.log('logged in')
 
-	const currentPeriod =
-		result[1].ReportingPeriods.ReportPeriod.length -
-		1 -
-		result[1].ReportingPeriods.ReportPeriod.slice()
-			.reverse()
-			.findIndex((period) => {
-				return new Date() > new Date(period.StartDate)
-			})
+	const currentPeriod = 0;
 		console.log(result)
 	return new Response(
 		JSON.stringify({

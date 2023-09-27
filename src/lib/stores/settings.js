@@ -2,7 +2,7 @@ import { browser } from '$app/environment'
 import { writable } from 'svelte/store'
 
 const defaultSettings = {
-	theme: 'night'
+	theme: 'olivia'
 }
 
 const initial = browser

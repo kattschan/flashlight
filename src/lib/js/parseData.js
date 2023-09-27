@@ -174,7 +174,15 @@ export function parseData(session, oldAssignments) {
 
 		period.averageStyle = `color: ${getColor(averageRaw)};`
 		period.average = averageRaw >= 0 ? averageRaw.toFixed(1) + '%' : '-'
-
+		// period.gpa(average all classes, 90 is 4 points, 80 is 3 points, 70 is 2 points anything else is no points)
+		period.gpa = 0
+		for (let grade of grades) {
+			if (grade >= 90) period.gpa += 4
+			else if (grade >= 80) period.gpa += 3
+			else if (grade >= 70) period.gpa += 2
+		}
+		period.gpa /= grades.length
+		period.gpa = period.gpa.toFixed(2)
 		period.days = Math.round((new Date(period.ReportingPeriod.EndDate) - new Date()) / 86400000)
 		assignments.sort((a, b) => new Date(b.DueDate) - new Date(a.DueDate))
 		period.assignments = assignments
