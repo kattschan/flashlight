@@ -71,7 +71,7 @@
 			{#if error}
 				{error}
 			{:else}
-				&nbsp;
+				Have doubts about entering your login credentials? <a href="https://github.com/kattschan/flashlight" target="_blank">We're open source!</a>
 			{/if}
 		</div>
 		<button type="submit">

@@ -183,6 +183,9 @@ export function parseData(session, oldAssignments) {
 		}
 		period.gpa /= grades.length
 		period.gpa = period.gpa.toFixed(2)
+		// period.gpa.style(out of 4 since i don't know how to do AP classes yet)
+		period.gpa.style = `color: ${getColor(period.gpa * 25)};`
+
 		period.days = Math.round((new Date(period.ReportingPeriod.EndDate) - new Date()) / 86400000)
 		assignments.sort((a, b) => new Date(b.DueDate) - new Date(a.DueDate))
 		period.assignments = assignments
