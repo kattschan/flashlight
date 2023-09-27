@@ -181,6 +181,10 @@ export function parseData(session, oldAssignments) {
 			else if (grade >= 80) period.gpa += 3
 			else if (grade >= 70) period.gpa += 2
 		}
+		// If the class name starts with "AP " then add 1 point to the GPA
+		for (let course of period.Courses.Course) {
+			if (course.Title.startsWith('AP ')) period.gpa++
+		}
 		period.gpa /= grades.length
 		period.gpa = period.gpa.toFixed(2)
 
