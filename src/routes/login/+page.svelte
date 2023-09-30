@@ -58,6 +58,9 @@
 	}
 </script>
 
+<h1> Flashlight </h1>
+<p> A studentvue grade client </p>
+
 <svelte:head>
 	<title>Login</title>
 </svelte:head>
@@ -122,6 +125,12 @@
 	button {
 		display: flex;
 		justify-content: center;
+		transition-property: background-color;
+		transition-duration: 0.5s;
+	}
+ 
+	button:hover {
+		background: var(--bg-color-3-5);
 	}
 
 	@media (max-width: $breakpoint-phone) {
