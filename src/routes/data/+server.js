@@ -16,8 +16,7 @@ export async function GET({ locals }) {
 		// let gradebook = JSON.parse(await client.getGradebook()).Gradebook
 		result = await Promise.all([
 			client.getStudentInfo().then((value) => JSON.parse(value).StudentInfo),
-			client.getGradebook(0).then((value) => JSON.parse(value).Gradebook),
-			client.getGradebook(1).then((value) => JSON.parse(value).Gradebook),
+			client.getGradebook().then((value) => JSON.parse(value).Gradebook),
 		])
 
 		if (!result[0]) {
