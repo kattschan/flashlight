@@ -86,6 +86,8 @@ button {
 	background: var(--bg-color-1);
 	padding: $spacing-small;
 	border-radius: $roundness-small;
+	transition-duration: 1s;
+	transition-property: background-color;
 	&:hover {
 		background: var(--bg-color-1-5);
 		cursor: pointer;

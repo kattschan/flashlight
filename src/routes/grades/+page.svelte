@@ -48,7 +48,8 @@
 	.row-link {
 		display: table-row;
 		text-decoration: none;
-
+		transition-duration: .5s;
+		transition-property: background-color;
 		td:first-child {
 			border-radius: $roundness-small 0 0 $roundness-small;
 		}
